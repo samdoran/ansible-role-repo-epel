@@ -2,7 +2,7 @@
 - name: Copy EPEL GPG Key
   copy:
     src: RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
-    dest: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
+    dest: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
     owner: root
     group: root
     mode: 0644
@@ -22,7 +22,7 @@
 
 - name: Install EPEL GPG keys
   rpm_key:
-    key: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
+    key: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
     state: present
   tags: epel
 
