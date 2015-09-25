@@ -20,6 +20,12 @@
     - epel-testing.repo.j2
   tags: epel
 
+- name: Install EPEL GPG keys
+  rpm_key:
+    key: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
+    state: present
+  tags: epel
+
 - name: Install EPEL repository
   yum:
     name: epel-release
