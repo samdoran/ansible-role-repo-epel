@@ -1,0 +1,27 @@
+---
+- name: Copy EPEL GPG Key
+  copy:
+    src: RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
+    dest: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
+    owner: root
+    group: root
+    mode: 0644
+  tags: epel
+
+- name: Copy EPEL repository files
+  template:
+    src: "{{ item }}"
+    dest: /etc/yum.repos.d/{{ item }}
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - epel.repo.j2
+    - epel-testing.repo.j2
+  tags: epel
+
+- name: Install EPEL repository
+  yum:
+    name: epel-release
+    state: present
+  tags: epel
