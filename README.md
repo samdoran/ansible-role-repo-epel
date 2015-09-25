@@ -1,5 +1,6 @@
 EPEL Repo
 =========
+[![Galaxy](https://img.shields.io/badge/galaxy-sdoran.repo--epel-blue.svg)](https://galaxy.ansible.com/list#/roles/5295)
 
 Install Extra Packages for Enterprise Linux (EPEL) repository.
 
