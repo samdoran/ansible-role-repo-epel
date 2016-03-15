@@ -11,7 +11,7 @@
 - name: Copy EPEL repository files
   template:
     src: "{{ item }}"
-    dest: /etc/yum.repos.d/{{ item }}
+    dest: /etc/yum.repos.d/{{ item.split('.')[0] + '.' + item.split('.')[1] }}
     owner: root
     group: root
     mode: 0644
