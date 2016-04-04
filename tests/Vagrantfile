@@ -21,6 +21,4 @@ Vagrant.configure(2) do |config|
     ansible.playbook = "vagrant.yml"
   end
 
-  config.vm.provision "shell", inline: "sudo yum -y install htop"
-
 end
