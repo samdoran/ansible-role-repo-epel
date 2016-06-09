@@ -1,18 +1,18 @@
 Vagrant.configure(2) do |config|
 
   # CentOS 5
-  config.vm.define "el5" do |el5|
-    el5.vm.box = "hfm4/centos5"
+  config.vm.define "centos5" do |centos5|
+    centos5.vm.box = "hfm4/centos5"
   end
 
   # CentOS 6
-  config.vm.define "el6" do |el6|
-    el6.vm.box = "geerlingguy/centos6"
+  config.vm.define "centos6" do |centos6|
+    centos6.vm.box = "geerlingguy/centos6"
   end
 
   # CentOS 7
-  config.vm.define "el7" do |el7|
-    el7.vm.box = "geerlingguy/centos7"
+  config.vm.define "centos7" do |centos7|
+    centos7.vm.box = "geerlingguy/centos7"
   end
 
   config.vm.provision "shell", inline: "sudo yum -y install python-simplejson"
