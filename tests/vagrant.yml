@@ -2,5 +2,12 @@
 - hosts: all
   remote_user: vagrant
   become: True
+
+  pre_tasks:
+    - name: Remove epel
+      yum:
+        name: epel-release
+        state: absent
+
   roles:
     - ../repo-epel
