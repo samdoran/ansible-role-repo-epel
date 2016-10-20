@@ -1,7 +1,6 @@
----
 - hosts: all
   remote_user: vagrant
-  become: True
+  become: yes
 
   pre_tasks:
     - name: Remove epel
@@ -10,4 +9,4 @@
         state: absent
 
   roles:
-    - ../repo-epel
+    - repo-epel
