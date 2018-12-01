@@ -1,6 +1,6 @@
 - hosts: all
   remote_user: vagrant
-  become: yes
+  become: true
 
   pre_tasks:
     - name: Remove epel
