@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: repo-epel
   author: Sam Doran
   description: "Install Extra Packages for Enterprise Linux Repository"
   company:
