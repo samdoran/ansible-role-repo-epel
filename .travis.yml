@@ -3,7 +3,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: caddy
+    - ROLE_NAME: repo_epel
   matrix:
     - MOLECULE_DISTRIBUTION: centos6
     - MOLECULE_DISTRIBUTION: centos7
