@@ -2,7 +2,7 @@
   yum:
     name: epel-release
     state: present
-  when: ansible_distribution == 'CentOS'
+  when: ansible_facts.distribution == 'CentOS'
   tags:
     - epel
 
@@ -11,6 +11,6 @@
     name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_facts.distribution_major_version }}.noarch.rpm
     state: present
     disable_gpg_check: yes
-  when: ansible_distribution == 'RedHat'
+  when: ansible_facts.distribution == 'RedHat'
   tags:
     - epel
