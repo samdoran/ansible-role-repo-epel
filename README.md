@@ -1,13 +1,13 @@
 EPEL Repo
 =========
-[![Galaxy](https://img.shields.io/badge/galaxy-samdoran.repo--epel-blue.svg)](https://galaxy.ansible.com/samdoran/repo-epel)
+[![Galaxy](https://img.shields.io/badge/galaxy-samdoran.repo_epel-blue.svg)](https://galaxy.ansible.com/samdoran/repo_epel)
 
 Install Extra Packages for Enterprise Linux (EPEL) repository.
 
 Requirements
 ------------
 
-RHEL or CentOS >= 5
+RHEL-based distribution >= 5
 
 Role Variables
 --------------
@@ -26,9 +26,9 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - epel-repo
+         - epel_repo
 
 License
 -------
 
-MIT
+Apache 2.0

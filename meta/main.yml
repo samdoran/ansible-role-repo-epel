@@ -4,7 +4,7 @@ galaxy_info:
   description: "Install Extra Packages for Enterprise Linux Repository"
   company:
   license: MIT
-  min_ansible_version: 2.5
+  min_ansible_version: 2.9
 
   platforms:
     - name: EL
@@ -12,6 +12,8 @@ galaxy_info:
         - 5
         - 6
         - 7
+        - 8
+        - 9
 
   galaxy_tags:
     - packaging

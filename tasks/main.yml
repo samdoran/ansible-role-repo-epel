@@ -2,7 +2,7 @@
   yum:
     name: epel-release
     state: present
-  when: ansible_facts.distribution == 'CentOS'
+  when: ansible_facts.distribution in ['CentOS', 'AlmaLinux', 'Rocky']
   tags:
     - epel
 
